@@ -12,7 +12,7 @@ from miner import Miner
     parser_opts={"help": "Run TREX miner"},
 )
 def start(*args, **kwargs):
-    Miner("/srv/apps/barrenero-miner-trex/t-rex", kwargs["config_file"]).run()
+    Miner("/srv/apps/barrenero-miner-trex/t-rex", kwargs["config_file"]).run(*args)
 
 
 if __name__ == "__main__":

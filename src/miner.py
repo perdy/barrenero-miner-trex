@@ -7,8 +7,8 @@ class Miner:
         self.miner_bin = miner_bin
         self.config = config
 
-    def run(self):
-        cmd = shlex.split(self.miner_bin)
+    def run(self, *args):
+        cmd = shlex.split(f"{self.miner_bin} {' '.join(args)}")
         if self.config:
             cmd += ["-c", self.config]
 
